@@ -2,10 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchNewTime } from '../../redux/actionCreators';
+import Timeline from '../../components/Timeline/Timeline' ;
 
 const Home = (props) => {
   return (
     <div className="home">
+      <Timeline />
       <h1>Welcome home!</h1>
       <p>Current time: {props.currentTime}</p>
       <button onClick={props.updateTime}>
